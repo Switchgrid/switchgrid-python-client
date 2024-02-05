@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  deploy:
+  run-tests:
     strategy:
       fail-fast: false
       matrix:
@@ -28,5 +28,3 @@ jobs:
         run: poetry run pytest -v
       - name: Build the package
         run: poetry build
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
