@@ -1,8 +1,7 @@
 name: Run tests
 
 on:
-  release:
-    types: [published]
+  push:
 
 jobs:
   deploy:
