@@ -56,14 +56,11 @@ class SwitchgridData:
         self._last_updated = None
         self._session = session
         self._last_response = None
-        print("🟢 SwitchgridData initialized")
 
     async def update(self):
         """Get the latest data from Switchgrid."""
         async with self._session.get(API_URL) as response:
-            print("🟢 Doing request")
             if response.status != 200:
-                print("🔴 reponse code not 200")
                 return
             json_data = await response.json()
             self._last_response = parse_api_response(json_data)
