@@ -12,7 +12,7 @@ API_URL = "https://licarth.eu.ngrok.io/api/homeassistant/events"
 
 
 @dataclass
-class Event(dict):
+class Event:
     eventId: str
     startUtc: datetime
     endUtc: datetime
@@ -21,7 +21,7 @@ class Event(dict):
 
 
 @dataclass
-class SwitchgridEventsResponse(dict):
+class SwitchgridEventsResponse:
     events: list[Event]
 
 
