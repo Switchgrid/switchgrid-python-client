@@ -7,8 +7,7 @@ from datetime import datetime
 from dataclasses import dataclass
 from typing import TypedDict
 
-API_URL = "https://licarth.eu.ngrok.io/api/homeassistant/events"
-# API_URL = "https://app.switchgrid.tech/api/homeassistant/events"
+API_URL = "https://app.switchgrid.tech/api/homeassistant/events"
 
 
 @dataclass
