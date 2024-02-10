@@ -3,7 +3,7 @@ from unittest import mock
 from datetime import datetime, timedelta, timezone
 import asyncio
 from aiohttp import ClientSession
-from switchgrid_python_client import SwitchgridData, SwitchgridEventsResponse, Event
+from switchgrid_python_client import SwitchgridClient, SwitchgridEventsResponse, Event
 from asynctest import CoroutineMock, patch
 
 
@@ -27,7 +27,7 @@ async def test_update_with_successful_response(mock_get):
     )
 
     session = ClientSession()
-    sd = SwitchgridData(session)
+    sd = SwitchgridClient(session)
 
     await sd.update()
 

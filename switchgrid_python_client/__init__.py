@@ -45,12 +45,12 @@ def parse_api_response(response):
         return None
 
 
-class SwitchgridData:
+class SwitchgridClient:
     _last_response: SwitchgridEventsResponse
     _session: ClientSession
 
     def __init__(self, session: ClientSession):
-        """Initialize the SwitchgridData object."""
+        """Initialize the SwitchgridClient object."""
         self._data = {}
         self._last_updated = None
         self._session = session
